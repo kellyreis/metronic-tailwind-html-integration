@@ -18,7 +18,7 @@ export default {
 	theme: {
 		extend: {
 			base: {
-				colors: {
+				colors: {				
 					gray: {
 						light: {
 							100: '#F9F9F9',
@@ -27,7 +27,7 @@ export default {
 							400: '#C4CADA',
 							500: '#99A1B7',
 							600: '#78829D',
-							700: '#4B5675',
+							700: '#101828',
 							800: '#252F4A',
 							900: '#071437',
 						},
@@ -42,6 +42,7 @@ export default {
 							800: '#B5B7C8',
 							900: '#F5F5F5'
 						}
+
 					},
 					contextual: {
 						light: { 
@@ -53,14 +54,14 @@ export default {
 								inverse: '#ffffff'
 							},
 							primary: {
-								default: '#1B84FF',
-								active: '#056EE9',
+								default: '#5925DC',
+								active: '#5925DC',
 								light: '#EFF6FF',
 								clarity: 'rgba(27, 132, 255, 0.20)',
 								inverse: '#ffffff'
 							},
 							success: {
-								default: '#17C653',
+								default: '#5925DC',
 								active: '#04B440',
 								light: '#EAFFF1',
 								clarity: 'rgba(23, 198, 83, 0.20)',
@@ -81,11 +82,11 @@ export default {
 								inverse: '#ffffff'
 							},
 							warning: {
-								default: '#F6B100',
+								default: '#5925DC',
 								active: '#DFA000',
-								light: '#FFF8DD',
-								clarity: 'rgba(246, 177, 0, 0.20)',
-								inverse: '#ffffff'
+								light: '#F4EBFF',
+								clarity: '#F4EBFF',
+								inverse: '#F4EBFF'
 							},
 							dark: {
 								default: '#1E2129',
@@ -132,7 +133,7 @@ export default {
 								inverse: '#ffffff'
 							},
 							info: {
-								default: '#883FFF',
+								default: '#6938EF',
 								active: '#9E63FF',
 								light: '#272134',
 								clarity: 'rgba(136, 63, 255, 0.20)',
@@ -146,11 +147,11 @@ export default {
 								inverse: '#ffffff'
 							},
 							warning: {
-								default: '#C59A00',
+								default: '#5925DC',
 								active: '#D9AA00',
 								light: '#242320',
-								clarity: 'rgba(197, 154, 0, 0.20)',
-								inverse: '#ffffff'
+								clarity: '#F4EBFF',
+								inverse: '#F4EBFF'
 							},
 							dark: {
 								default: '#272A34',
@@ -167,7 +168,7 @@ export default {
 								inverse: '#9A9CAE'
 							},
 							secondary: {
-								default: '#363843',
+								default: '#E4E7EC',
 								active: '#464852',
 								light: '#363843',
 								clarity: 'rgba(54, 56, 67, 0.20)',
@@ -175,6 +176,8 @@ export default {
 							},
 						}
 					}
+					
+
 				},
 				boxShadows: {
 					light: {
@@ -372,7 +375,7 @@ export default {
 				sm: '640px',
 				md: '768px',
 				lg: '1024px',
-				xl: '1280px',
+				xl: '1376px',
 				'2xl': '1536px',
 			}
 		},
@@ -388,7 +391,7 @@ export default {
 							drawer: 'white',
 							dropdown: 'white',
 							backdrop: 'rgba(0, 0, 0, 0.80)',
-							tableHead: 'var(--tw-light-active)'
+							tableHead: 'var(--tw-light-active)'					
 						},
 						dark: {
 							card: theme('colors.coal')['300'],
@@ -582,9 +585,9 @@ export default {
 				demo1: {
 					sidebar: {
 						width: {
-							desktop: '280px',
+							desktop: '300px',
 							desktopCollapse: '80px',
-							mobile: '280px'
+							mobile: '300px'
 						}
 					},
 					header: {
@@ -631,7 +634,8 @@ export default {
 		require('./src/metronic/core/plugins/components/scrollable'),
 		require('./src/metronic/core/plugins/components/progress'),
 		require('./src/metronic/core/plugins/components/apexcharts'),
-		require('./src/metronic/core/plugins/components/leaflet')
+		require('./src/metronic/core/plugins/components/leaflet'),
+	
 	]
 }
 

@@ -1,35 +1,79 @@
-import Sidebar from './components/Sidebar.tsx';
-import Footer from './components/Footer.tsx';
-import Header from './components/Header.tsx';
+import {useEffect}  from 'react';
 import KTComponent from './metronic/core';
-import { useEffect } from 'react';
 import KTLayout from './metronic/app/layouts/demo1.js';
-import SearchModal from "./components/SearchModal.tsx";
+import {Home} from './pages/Home'; 
+import { ListaPacientes } from './pages/Pacientes/index.tsx';
+import { CadatroPaciente } from './pages/Pacientes/cadastro.tsx';
+import { Login } from './pages/Login/index.tsx';
+import { RecuperarSenha } from './pages/Login/recuperar-senha.tsx';
+import { CheckEmail } from './pages/Login/check-email.tsx';
+import { ResetarSenha } from './pages/Login/resetar-senha.tsx';
+
+import { ListaComunidade } from './pages/Comunidade/index.tsx';
+
+import { Chat } from './pages/Comunidade/chat.tsx';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {  
+
   useEffect(() => {
     KTComponent.init();
     KTLayout.init();
   }, []);
 
+  
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Login  />
+  },  
+  {
+    path: "/resetar-senha",
+    element: <ResetarSenha  />
+  },    
+  {
+    path: "/recuperar-senha",
+    element: <RecuperarSenha  />
+  },
+  {
+    path: "/check-email",
+    element: <CheckEmail  />
+  },
+  
+  {
+    path: "/home",
+    element: <Home  />
+  },
+  {
+    path: "/pacientes",
+    element: <ListaPacientes  />
+  },
+  {
+    path: "/cadastro-paciente",
+    element: <CadatroPaciente  />
+  },
+  {
+    path: "/comunidade",
+    element: <ListaComunidade  />
+  },
+  {
+    path: "/chat",
+    element: <Chat  />
+  },
+  
+])
+
   return (
     <>
-      <div className="flex grow">
-        <Sidebar />
-        <div className="wrapper flex grow flex-col">
-          <Header />
-          <main className="grow content pt-5" id="content" role="content">
-          <div className="container-fixed" id="content_container">
-          </div>
-          <div className="container-fixed">
-            {/* place your content here */}
-          </div>
-          </main>
-          <Footer />
-        </div>
-      </div>
-      <SearchModal />
-    </>
+
+      <RouterProvider router={router}  />   
+
+      </>
+  
   )
 }
 
