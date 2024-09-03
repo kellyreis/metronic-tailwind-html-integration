@@ -253,7 +253,7 @@ export function Formulario() {
                                     <span className="tooltip" id="image_input_tooltip">
                                         Click to remove or revert
                                     </span>
-                                    <div className="image-input-placeholder rounded-full border-2 border-success image-input-empty:border-gray-300" style={{ backgroundImage: 'url(././media/avatars/blank.png)' }} >
+                                    <div className="image-input-placeholder rounded-full border-2 border-success image-input-empty:border-gray-300"  >
                                         <div className="image-input-preview rounded-full">
                                         </div>
                                         <div className="flex items-center justify-center cursor-pointer h-5 left-0 right-0 bottom-0 bg-dark-clarity absolute">
